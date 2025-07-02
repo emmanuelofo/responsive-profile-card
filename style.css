@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --yellow: hsl(47, 88%, 63%);
+    --white:hsl(0, 0%, 100%);
+    --gray: hsl(0, 0%, 42%);
+    --black: hsl(0, 0%, 7%);
+}
+
+body{
+    background-color: var(--yellow);  
+    min-height: 100vh;
+    font-family: 'figtree', sans-serif;
+    display: grid;
+    place-content: center;
+}
+
+
+
+ .author .user{
+    border-radius: 700px;
+    
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+.card{
+    background-color: var(--white);
+    max-width: 400px;
+    padding: 1.5rem;
+    margin: 1rem;
+    position: relative;
+    border-radius: 1rem;
+    outline: 1px solid #000; 
+}
+
+.card::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    position: absolute;
+    top: 15px;
+    right: -15px;
+    border-radius: 1rem;
+    z-index: -1;
+}
+
+.card img{   
+    border-radius: 1rem;
+}
+
+.card .Learning{
+    background-color: var(--yellow);
+    width: min-content;
+    padding: .5rem;
+    margin-top: 1.5rem;
+    font-weight: 800;
+    border-radius: .5rem;
+}
+
+.card .date{
+    margin-top: 1rem;
+    color: var(--gray);
+}
+
+.card h1{
+    margin: 1rem 0;
+}
+
+.card h1 a{
+    color: var(--black);
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1;
+    text-decoration: none;
+}
+.card h1 a:hover{
+    color: var(--yellow);
+}
+
+.card .description{
+    color: var(--gray);
+    line-height: 1.5;
+}
+.card .author{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.card .author img{
+    width: 30px;
+}
+
+.card .author .name{
+    font-weight: 800;
+}
+
+@media screen and (max-width:500px) {
+    .card h1 a {
+        font-size: 1.25rem;
+    }
+    .card{
+        width: 85%;
+        height: 31.3rem;
+    }
+}
